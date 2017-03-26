@@ -1,0 +1,22 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "private": true,
+  "dependencies": {
+    "express": "~4.15.2",
+    "@types/node": "~6.0.60",
+    "@types/express": "~4.0.22",
+    "protractor": "~5.1.0",
+    "ts-node": "~2.0.0",
+    "tslint": "~4.4.2",
+    "typescript": "~2.0.0"
+  }
+}
