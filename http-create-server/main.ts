@@ -1,8 +1,5 @@
-import * as http from 'http';
+import nodeServer from './server-node'
+import expressServer from './server-express';
 
-function requestHandler(req: http.ServerRequest, res: http.ServerResponse): void {
-  res.end('some response' + req.statusCode + req.statusMessage);
-}
-
-const server = http.createServer(requestHandler);
-server.listen(3000);
+nodeServer();
+expressServer();
