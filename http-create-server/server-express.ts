@@ -4,9 +4,16 @@ import * as http from 'http';
 export default function start(): void {
   const app = express();
 
-  app.use((req, res) => res.end('express server response'));
+  app.use(logger);
+  app.use((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/html' })
+    res.end('<h1>express server response</h1>');
+  });
   http.createServer(app)
     .listen(3001, () => console.log('express server listening on 3001'));
+
+  function logger(req, res, next): void {
+    console.log('New request from ' + req.url);
+    next();
+  }
 }
-
-
